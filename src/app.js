@@ -11,7 +11,9 @@ import factorRoutes from "./routes/factorRoutes.js";
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://decision-app-frontend-h1yo.onrender.com"
+}));
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/decisions", decisionRoutes);
