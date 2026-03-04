@@ -19,4 +19,4 @@ const pool = process.env.DATABASE_URL
       database: process.env.DB_NAME,
     });
 
-export default pool;v
+export default pool;
