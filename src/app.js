@@ -12,7 +12,9 @@ import factorRoutes from "./routes/factorRoutes.js";
 const app = express();
 
 app.use(cors({
-  origin: "https://decision-app-frontend-h1yo.onrender.com"
+   origin: "https://decision-app-frontend-h1yo.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 app.use(express.json());
 app.use("/api/auth", authRoutes);
